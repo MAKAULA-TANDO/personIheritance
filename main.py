@@ -38,11 +38,10 @@ class Person:
     dob = property(getdob, setdob)
 
     def display(self):
-        text = "First name : " + self.name
+        text = f"First name : {self.name}"
         text = text + "\n" + "Surname : " + self.sname
         text = text + "\n" + "ID Number : " + self.id
-        text = text + "\n" + "Date Of Birth : " + self.dob
-        return text
+        return text + "\n" + "Date Of Birth : " + self.dob
 
 
 class PhDStudent(Person):
@@ -83,8 +82,7 @@ class PhDStudent(Person):
         text = text + "\n" + "Student Number: " + self.stdnum
         text = text + "\n" + "Internal Mark: " + str(self.intmark) + "%"
         text = text + "\n" + "External Mark: " + str(self.extmark) + "%"
-        text = text + "\n" + "The final mark:  " + str(self.average()) + "%"
-        return text
+        return text + "\n" + "The final mark:  " + str(self.average()) + "%"
 
 
 class PhDExaminer(Person):
@@ -125,8 +123,7 @@ class PhDExaminer(Person):
         text = text + "\n" + "Staff Number: " + self.stfn
         text = text + "\n" + "Hourly Rate: R" + str(self.hrate)
         text = text + "\n" + "Total hours: " + str(self.nhours) + " Hrs"
-        text = text + "\n" + "Total salary: R" + str(self.salary())
-        return text
+        return text + "\n" + "Total salary: R" + str(self.salary())
 
 
 class ScreenCreate:
